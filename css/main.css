@@ -1,0 +1,102 @@
+.no-bold {
+    font-weight: normal;
+}
+
+.header-principal {
+    background-image: url(../images/sand-background-image@2x.png);
+    height: 20vh;
+}
+
+.header-principal p {
+    font-size: 1.2rem;
+}
+
+.text-primary {
+    color: #3662E3;
+}
+
+.popular {
+    background-color: #3762E4;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+}
+
+.table {
+    table-layout: fixed;
+    width: 100%;
+}
+table td:nth-child(1) {
+    background-color: #F9FAFC;
+    font-weight: bold;
+}
+
+table td:nth-child(2),
+table th:nth-child(2) {
+    text-align: center;
+}
+
+table td:nth-child(3),
+table th:nth-child(3) {
+    text-align: center;
+}
+
+table td:nth-child(4),
+table th:nth-child(4) {
+    background-color: #121826;
+    color: white;
+    border: none;
+    text-align: center;
+}
+
+
+table td:nth-child(5),
+table th:nth-child(5) {
+    text-align: center;
+}
+
+table tr:last-child td:first-child {
+    background-color: transparent;
+    /* Ou você pode definir a cor desejada */
+}
+
+table tr:last-child td:nth-child(4) {
+    background-color: #E9A23B;
+    /* Cor de fundo amarelo */
+}
+
+
+@media (min-width: 1280px) {
+    /* Mostrar todas as colunas em telas maiores ou iguais a 1280px */
+    .hide-free,
+    .hide-team,
+    .hide-popular,
+    .hide-enterprise {
+        display: table-cell; /* Mostrar todas as colunas */
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1279px) {
+    /* Mostrar apenas Team, Popular e Enterprise em telas entre 1024px e 1279px */
+    .hide-free {
+        display: none; /* Ocultar Free */
+    }
+
+    .hide-team,
+    .hide-popular,
+    .hide-enterprise {
+        display: table-cell; /* Mostrar colunas Team, Popular e Enterprise */
+    }
+}
+
+@media (max-width: 640px) {
+    /* Mostrar apenas Popular e Enterprise em telas menores que 640px */
+    .hide-free,
+    .hide-team {
+        display: none; /* Ocultar Free e Team */
+    }
+
+    .hide-popular,
+    .hide-enterprise {
+        display: table-cell; /* Mostrar apenas Popular e Enterprise */
+    }
+}
